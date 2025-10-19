@@ -1,0 +1,109 @@
+<html> 
+<head>
+<title>Karl</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: lightblue;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.3s;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .sidebar a:hover {
+    background-color: #add8e6;
+  }
+
+  .sidebar.collapsed {
+    width: 60px;
+  }
+
+  .sidebar.collapsed a {
+    font-size: 0;
+    padding: 10px 0;
+  }
+
+  .toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 210px;
+    background-color: lightblue;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .sidebar.collapsed + .toggle-btn {
+    left: 70px;
+  }
+
+  .content {
+    margin-left: 220px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+
+  .sidebar.collapsed ~ .content {
+    margin-left: 80px;
+  }
+</style>
+</head>
+
+<body style="background-color: beige; margin:0;">
+
+<div id="sidebar" class="sidebar">
+  <a href="../index.html">Home</a>
+  <a href="../yearn.html">Yearning</a>
+  <a href="../freinds.html">Friends</a>
+  <a href="../lost_friends.html">Enemies</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+<div class="content">
+  <h1 id="home" style="text-align:center; color:black">Karl lebanese</h1>
+  <h2 style="text-align:center; color:black">either mexican or lebanese</h2>
+</div>
+
+<div class="content">
+  <h3 style="text-align:center; color:black">bald haircut</h3>
+  <h3 style="text-align:center; color:black">big ahh forehead</h3>
+  <h3 style="text-align:center; color:black">shit ahh civic</h3>
+  <h3 style="text-align:center; color:black">jsut realised you can go to maccas</h3>
+  <h3 style="text-align:center; color:black">can run anywhere</h3>
+  <h3 style="text-align:center; color:black">has a girlfriend</h3>
+  <h3 style="text-align:center; color:black">kaytranada</h3>
+</div>
+
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+  }
+</script>
+
+
+</body>
+</html>
