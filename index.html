@@ -1,0 +1,106 @@
+<html> 
+<head>
+<title>Garden of Yearning</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: lightblue;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.3s;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .sidebar a:hover {
+    background-color: #add8e6;
+  }
+
+  .sidebar.collapsed {
+    width: 60px;
+  }
+
+  .sidebar.collapsed a {
+    font-size: 0;
+    padding: 10px 0;
+  }
+
+  .toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 210px;
+    background-color: lightblue;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .sidebar.collapsed + .toggle-btn {
+    left: 70px;
+  }
+
+  .content {
+    margin-left: 220px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+
+  .sidebar.collapsed ~ .content {
+    margin-left: 80px;
+  }
+</style>
+</head>
+
+<body style="background-color: beige; margin:0;">
+
+<div id="sidebar" class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="yearn.html">Yearning</a>
+  <a href="freinds.html">Friends</a>
+  <a href="lost_friends.html">Enemies</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+<div class="content">
+  <h1 id="home" style="text-align:center; color:black">Welcome to the garden of yearning and loss</h1>
+  <h2 style="text-align:center; color:black">A collection of such good and awesome memories</h2>
+  <p style="text-align:center; color:black">Took the mantle, passed down from Jeremy</p>
+</div>
+
+
+
+<div class="content">
+  <h2 style="text-align:center; color:black">Feeling lonely?</h2>
+  <a style="color:blue; text-align:center; margin: 0 auto; display:block; width: fit-content;" href="Eat food with your girl.HTML">I can fix that.</a>
+</div>
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+  }
+</script>
+
+
+</body>
+</html>
